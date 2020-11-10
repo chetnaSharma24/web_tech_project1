@@ -1,0 +1,47 @@
+
+/*contact start*/
+form{
+   /* background-color: #fff;*/
+    padding: 10px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+form input,
+form textarea{
+    
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    outline: none;
+    background: rgba(240, 230, 240,0.6); 
+    transition: all .4s;
+
+
+}
+
+form input:hover,
+form input:focus,
+form textarea:hover,
+form textarea:focus{
+    border: 2px solid #f4f4f4;
+    background-color: rgba(240, 230, 240, 0.9);
+
+}
+
+form textarea{
+    min-height: 90px;
+    margin-bottom: 15px;
+}
+
+form label{
+    display: block;
+    padding: 5px 0px;
+}
+
+
+/*contact end*/
+
+
+
