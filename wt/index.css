@@ -17,9 +17,20 @@ body {
 .navbar{
   padding-top: 25px;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+
 nav {
  position: relative;
- width: 95%; /*calc(100% - 60px);*/
+ width: 100%; /*calc(100% - 60px);*/
  margin: 0 auto;
  
  z-index: 1;

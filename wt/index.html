@@ -20,23 +20,23 @@
   
 </head>
   <body>
-  <div class="navbar">
-    <nav>
+  <div class="navbar" style="background-color:#9C9EA4;">
+    <nav id="myHeader" style="background-color:  #9C9EA4;" >
   
-  <ul class="menu-area">
+  <ul class="menu-area ">
    <li><a href="index" style="color: blueviolet;padding-right:12em;"><h5> Battling<i> Covid </i>Together</h5></a> </li> 
 
   <li><a href="index.html">Home</a></li>
   <li><a href="#statistics">Covid-19 Statistics</a></li>
   <li><a href="#">Cart</a></li>
   <li><a href="#contact">Contact</a></li>
-  <li><a href="login.html">SignUp</a></li><hr>
+  <li><a href="login.html">SignUp</a></li>
   </ul>
   </nav> 
+  <hr>
   <br>
-
   </div>
-<div style="background-color: burlywood; height:15em;">
+<div style="background-color: burlywood; height:15em;margin:15px;" class="content">
   <table style="margin:20px 20px 20px 20px;">
     <tr> 
       <td style="width:40%; height:50px;padding-left:25px;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, odio nostrum ab suscipium,
@@ -55,7 +55,7 @@
 
 
 <div style="text-align: center;">
-  <h4>Click on the image to get the Latest Deals on masks!!</h4><hr>
+  <h4>Click on the image to get the Latest Deals on trending categories!!</h4><hr>
 </div><br>
 <div class="slideshow-container">
   <div class="mySlides1">
@@ -63,11 +63,17 @@
   </div>
 
   <div class="mySlides1">
-    <img src="../images/m3.jpeg" style="width:100%;height:25em;">
+    <img src="../images/s3.jpg" style="width:100%;height:25em;">
   </div>
 
   <div class="mySlides1">
-    <img src="../images/m2.jpg" style="width:100%;height:25em;">
+    <img src="../images/shield.jpg" style="width:100%;height:25em;">
+  </div>
+  <div class="mySlides1">
+    <img src="../images/gloves.jpg" style="width:100%;height:25em;">
+  </div>
+  <div class="mySlides1">
+    <img src="../images/ppe.jpg" style="width:100%;height:25em;">
   </div>
 
   <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
@@ -87,50 +93,6 @@
 <br>
 <br>
 
-<div style="text-align: center;">
-  <h4>Click on the image to get the Latest Deals on sanitizers!!</h4><hr>
-</div>
-<br>
-<div class="slideshow-container">
-  <div class="mySlides2">
-    <a href="#mask"> <img src="../images/s1.jpg" style="width:100%;height:25em;"></a>
-  </div>
-
-  <div class="mySlides2">
-    <img src="../images/s2.jpg" style="width:100%;height:25em;">
-  </div>
-
-  <div class="mySlides2">
-    <img src="../images/s3.jpg" style="width:100%;height:25em;">
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-  <span class="dot" onclick="currentSlide(5)"></span> 
-
-</div>
-<br>
-<br>
-
-
-<!--end slide show-->
-
-
-
-<!--covid statistics-->
-
-<div class="container" style="margin:40px;"id="statistics">
-  <div class="elfsight-app-91a96aa8-e76e-45ab-a923-a714a81066ff"></div>
-</div>
-<!-- end statistics-->
 <!--categories-->
 
 <div class="container" id="mask">
@@ -270,8 +232,54 @@
 </div>
 </div>
 <!--categoris end-->
-<hr>
 
+<!--latest news slider-->
+
+
+<div style="text-align: center;">
+  <h4>Facts About Covid!!!</h4><hr>
+</div>
+<br>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <a href="#mask"> <img src="../images/cgreet.jpg" style="width:100%;height:25em;"></a>
+  </div>
+
+  <div class="mySlides2">
+    <img src="../images/chealth.png" style="width:100%;height:25em;">
+  </div>
+
+  <div class="mySlides2">
+    <img src="../images/masks.jpg" style="width:100%;height:25em;">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+
+</div>
+<br>
+<br>
+
+
+<!--end slide show-->
+
+
+
+<!--covid statistics-->
+
+<div class="container" style="text-align: center;"id="statistics">
+  <div class="elfsight-app-91a96aa8-e76e-45ab-a923-a714a81066ff"></div>
+</div>
+<!-- end statistics-->
 <!-- contact start-->
 <section id="contact">
 <div class="container">
@@ -357,6 +365,22 @@
   }
   </script>
   <!-- slider script end-->
+  <!--header stable-->
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
+    <!--end header script-->
 </body>
 
 </html>
