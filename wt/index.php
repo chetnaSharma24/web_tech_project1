@@ -20,8 +20,8 @@
   
 </head>
   <body>
-  <div class="navbar" style="background-color:#9C9EA4;">
-    <nav id="myHeader" style="background-color:  #9C9EA4;" >
+  <div class="navbar" >
+    <nav id="myHeader" style="background-color:  #fff" >
   
   <ul class="menu-area ">
    <li><a href="index" style="color: blueviolet;padding-right:12em;"><h5> Battling<i> Covid </i>Together</h5></a> </li> 
@@ -288,21 +288,20 @@
   </h2>
 
  
-    <form name="myform"  method="post" action="#" onsubmit="return validateform();">  
+    <form name="myform"  method="post" action="contact.php" onsubmit="return validateform();">  
       <label for="name">*Email</label>
-      <input type="text" name="email" size="70"><br/>  
+      <input type="text"  id="email" name="email" size="70"><br/>  
         <label for="name">*Name</label>
-        <input type="text" name="name" size="70">
+        <input type="text" name="name" id="name" size="70">
         <label for="msg">*Message</label>
-          <textarea name="msg" style="width:60%"></textarea>
+          <textarea  id="msg" name="msg" style="width:60%"></textarea>
      <div>
       <button type="submit" class="btn btn-success">Send message</button>
   
       </div> 
        </form>  
   
-</body>
-</html>
+
 
  
 </div>
@@ -323,11 +322,11 @@
     alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
     return false;  
     } 
-  if(name==""){
+  if(y==""){
   alert("name field empty");
   return false;
    }
-   if(subject==""){
+   if(x==""){
   alert("Subject  field empty");
   return false;
    }
@@ -382,5 +381,8 @@
     </script>
     <!--end header script-->
 </body>
+<?php
+include 'connection.php';
+?>
 
 </html>
